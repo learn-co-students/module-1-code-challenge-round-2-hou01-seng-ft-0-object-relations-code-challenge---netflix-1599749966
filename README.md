@@ -1,32 +1,38 @@
-# Module 1 Code Challenge: Flatflix
+# Object Relations Code Challenge - Flatflix
 
-For this challenge, we'll be building out a Netflix clone!
+For this challenge, we'll be working with a Movie Review domain, like Netflix.
 
-A `Viewer` has many `Movie`s through `Review`s. A `Movie` can be reviewed by many `Viewer`s. A `Viewer` can review many `Movie`s, marking their rating on the `Review`.
+We have three models: `Viewer`, `Movie`, and `Review`.
 
-As always, make sure to sketch out your domain and think about the single source of truth for your data.
+A `Movie` has many `Review`s. A `Viewer` has many `Review`s. A `Review` belongs to a `Viewer` and belongs to a `Movie`.
 
-## Key Concepts
+`Viewer` - `Movie` is a many to many relationship.
 
-- Class and instance variables
-- Class and instance methods
-- One-to-many relationships
-- Many-to-many relationships
-- Enumerables
+Note: it can be helpful to draw your domain on paper or on a whiteboard before you start coding. Remember to identify a single source of truth for your data.
 
-## Getting Started
+## Topics
 
-To get started, run `bundle install` while inside of this directory.
+- Classes and Instances
+- Class and Instance Methods
+- Variable Scope
+- Object Relationships
+- Arrays and Array Methods
 
-We've provided you with a console that you can use to test your code. To enter a console session, run `ruby tools/console.rb`.
+## Instructions
 
-You'll be able to test out the methods that you write here. Take a look at `tools/console.rb` to see where you can define variables and create object instances to test out your code, rather than manually doing it in every single console session.
+Build out all of the methods listed in the deliverables. The methods build on each other, so you should write the methods in order.
+
+**Remember!** This code challenge does not have tests. You cannot run `rspec` and you cannot run `learn`. You'll need to create your own sample instances so that you can try out your code on your own. Make sure your associations and methods work in the console before submitting.
+
+We've provided you with a console that you can use to test your code. To enter a console session, run `ruby tools/console.rb` from the command line. You'll be able to test out the methods that you write here. Add code to the `tools/console.rb` file to define variables and create sample instances of your objects.
+
+Writing error-free code is more important than completing all of the deliverables listed - prioritize writing methods that work over writing more methods that don't work. You should test your code in the console as you write.
+
+Do your best to follow Ruby best practices. For example, use higher-level array methods such as `map`, `select`, and `find` when appropriate in place of `each`. When you encounter duplicated logic, you can extract it into a shared helper method.
 
 ## Deliverables
 
-Your goal is to build out the sets of methods in order. _Each set of methods is built up from the last set of methods._
-
-Do your best to follow Ruby best practices. For example, use higher-level array methods such as `map`, `select`, and `find` when appropriate in place of `each`.
+Write the following methods in the classes in the files provided. Feel free to build out any helper methods if needed.
 
 ### 1. `Review` model and relationships
 
