@@ -12,4 +12,25 @@ class Movie
     @@all
   end
 
+  def reviews
+    Review.all.select do |rev|
+      rev.movie == self
+    end
+  end
+
+  def reviewers
+    self.reviews.collect do |rev|
+      rev.viewer
+    end
+  end
+
+  def average_rating
+    sum = self.reviews.sum {|rev| rev.rating}
+    sum / self.reviews.count
+  end
+
+  def self.highest_rated
+    self.all.select do |
+  end
+
 end
